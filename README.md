@@ -9,3 +9,14 @@ churn is a critical metric for subscription-based businesses. Instead of simply 
 ### 1. Setup & Data Generation - Define **duration**: how long each customer has been observed. - Define **event indicator**: whether the customer churned (1) or is still active (0). - Collect **covariates**: customer features such as age, tenure, usage frequency, or engagement metrics.
 ### 2. Model Fitting - Fit the **Cox-PH model** using duration, event indicator, and covariates. - The model estimates: - **Baseline hazard function** (risk of churn over time without covariates). **Log-hazard coefficients** for each covariate.
 ### 3. Interpretation - Convert coefficients into **Hazard Ratios (HRs)**: - HR > 1 → Feature increases churn risk. - HR < 1 → Feature decreases churn risk. - Example: If HR for "low engagement" = 2.0, customers with low engagement are twice as likely to churn at any given time. ### 4. Prediction - Use the fitted model to predict **survival probabilities**: - Probability that a customer remains subscribed at different time points. - Apply predictions to: - Individual customers. - Cohorts (e.g., new vs. long-term customers).
+---
+## Installation
+1. Clone the repository:
+   ```
+   git clone https://github.com/Prashant44-cell/Churn-Analysis-using-Cox-Proportional-Models-.git
+   ```
+
+2. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
